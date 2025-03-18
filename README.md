@@ -129,7 +129,30 @@ The video examples helped too, showing patterns in both Java and Kotlin, which w
   3. **Factory Pattern** – Simplifies object creation when dealing with complex logic (e.g., creating different types of UI components).
   4. **Decorator Pattern** – Adds functionality to objects without changing their structure (e.g., adding scrolling to a window).
 
-  I’ll be summarizing these in more detail later with real-world examples and how they can be applied to my project.
+### 1. Singleton Pattern
+**Purpose:** Ensures only one instance of a class exists.
+
+```javascript
+class Singleton {
+    constructor() {
+        if (Singleton.instance) {
+            return Singleton.instance;
+        }
+        Singleton.instance = this;
+    }
+
+    log() {
+        console.log("Singleton instance in action!");
+    }
+}
+
+const singleton1 = new Singleton();
+singleton1.log();
+
+const singleton2 = new Singleton();
+console.log(singleton1 === singleton2); // true
+```
+Use case: Managing global app state.
 
 - I also read through the **Application Development Coding Project** assignment carefully. The rubric gave me a clearer picture of what’s expected, so now I feel a bit more grounded as I move forward.
 
