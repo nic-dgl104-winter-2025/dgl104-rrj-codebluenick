@@ -31,11 +31,6 @@ Overall, this week felt like a nice bridge between technical basics and user-cen
 - [LuaJIT](https://luajit.org/)
 
 
-### Bibliography:
-- [Lua Official Website](https://www.lua.org/)
-- [LuaRocks](https://luarocks.org/)
-- [LuaJIT](https://luajit.org/)
-
 
 ---
 
