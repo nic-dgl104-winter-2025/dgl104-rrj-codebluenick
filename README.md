@@ -2,7 +2,7 @@
 # Rsearch and Reflection Journal
 Research and Reflection Journal for DGL 104 course
 
-## Week 8 (Feb. 25)
+## Week 8 (Week of Feb 25th)
 
 This week was a mix of getting back to some core development principles and starting to look outward toward how users actually experience the things we build.
 
@@ -35,3 +35,43 @@ Overall, this week felt like a nice bridge between technical basics and user-cen
 - [Lua Official Website](https://www.lua.org/)
 - [LuaRocks](https://luarocks.org/)
 - [LuaJIT](https://luajit.org/)
+
+
+---
+
+## Week 9 (Week of March 4th)
+
+This week was all about diving into **design patterns**, and it really clicked with me how important these patterns are in writing clean, maintainable code. Ashley introduced the topic in the video lecture, and Dibya contributed some useful insights. 
+
+Design patterns were explained as reusable solutions to common coding problems. I liked the analogy of thinking about them like recipes – not set in stone, but flexible depending on the situation. It’s cool how they act as a shared language for developers, making it easier for teams to understand and maintain each other’s code.
+
+The video examples helped too, showing patterns in both Java and Kotlin, which was perfect since I'm familiar with both languages. I also checked out additional resources like Refactoring Guru to see how these patterns work across different languages. It’s interesting to notice how the same pattern might look slightly different depending on the language family.
+
+### Activities I Completed:
+
+- I started researching design patterns more deeply and picked four that stood out to me for further study:
+  1. **Singleton Pattern** – Ensures only one instance of a class exists (e.g., managing global app state).
+  2. **Observer Pattern** – A great pattern for things like event handling or notifications (e.g., UI updates).
+  3. **Factory Pattern** – Simplifies object creation when dealing with complex logic (e.g., creating different types of UI components).
+  4. **Decorator Pattern** – Adds functionality to objects without changing their structure (e.g., adding scrolling to a window).
+
+  I’ll be summarizing these in more detail later with real-world examples and how they can be applied to my project.
+
+- I also read through the **Application Development Coding Project** assignment carefully. The rubric gave me a clearer picture of what’s expected, so now I feel a bit more grounded as I move forward.
+
+- Next up, I checked out the new **Research and Reflection Journal guide** on GitHub. It’s helpful – I now have a clearer idea of how to approach writing my journal entries, especially around connecting research to my project work.
+
+- I spent some time on GitHub reading **“How to Contribute to Open Source”** from the Open Source Guides. It broke down the process in a way that made it seem much more approachable. What stood out to me most was section 2, where it talks about different types of contributions – like fixing bugs, improving documentation, or suggesting new features. Personally, I think I’d enjoy contributing through documentation or tackling beginner-friendly issues as a way to ease into open source.
+
+  Section 4 on “Finding a project” was super useful too. I browsed GitHub Explore and some Open Source Friday links and found a few interesting repositories I might want to follow up on later.
+
+### Reflections:
+Looking at everything this week, I’m feeling more confident in my choice to stick with Javascript for the project. It fits well with what we’re building.
+
+The next step for me is to help my group set a rough project timeline so we can stay on track. The challenge now is balancing research, coding, and contributing to open source, but I’m looking forward to it!
+
+---
+
+### Links I Found Helpful:
+- [Refactoring Guru](https://refactoring.guru/design-patterns)
+- [GitHub Open Source Guide](https://opensource.guide/how-to-contribute/)
