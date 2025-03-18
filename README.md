@@ -185,6 +185,41 @@ subject.subscribe(observer1);
 subject.notify("New Event");
 ```
 
+### 3. Factory Pattern
+
+**Purpose:** Simplifies object creation logic.
+
+```javascript
+class Button {
+    render() {
+        console.log("Render a generic button");
+    }
+}
+
+class IconButton extends Button {
+    render() {
+        console.log("Render a button with an icon");
+    }
+}
+
+class ButtonFactory {
+    static createButton(type) {
+        if (type === "icon") {
+            return new IconButton();
+        } else {
+            return new Button();
+        }
+    }
+}
+
+const btn1 = ButtonFactory.createButton("icon");
+btn1.render();
+
+const btn2 = ButtonFactory.createButton("simple");
+btn2.render();
+```
+Use case: Creating different types of UI components.
+
 - I also read through the **Application Development Coding Project** assignment carefully. The rubric gave me a clearer picture of what’s expected, so now I feel a bit more grounded as I move forward.
 
 - Next up, I checked out the new **Research and Reflection Journal guide** on GitHub. It’s helpful – I now have a clearer idea of how to approach writing my journal entries, especially around connecting research to my project work.
