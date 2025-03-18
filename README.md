@@ -71,6 +71,24 @@ end
 print("Sum is: " .. sum)
 ```
 
+### Simple Game Development Example (Movement Simulation)
+
+### Example in Lua:
+```lua
+-- Basic movement simulation in Lua (game style)
+local player = { x = 0, y = 0 }
+
+function movePlayer(dx, dy)
+    player.x = player.x + dx
+    player.y = player.y + dy
+    print("Player position: (" .. player.x .. ", " .. player.y .. ")")
+end
+
+-- Simulate moving right and up
+movePlayer(1, 0) -- right
+movePlayer(0, 1) -- up
+movePlayer(1, 1) -- diagonally
+```
 
 
 We also got to write user stories based on WhatsApp. I came up with:
