@@ -25,7 +25,7 @@ end
 greet("World")
 greet("Lua Learner")
 ```
-## LuaRocks Example (Package Management)
+### LuaRocks Example (Package Management)
 
 **LuaRocks** is a package manager for Lua. It helps manage libraries and dependencies easily. Here's an example of how to install and use the popular `luasocket` library.
 
@@ -36,6 +36,8 @@ luarocks install luasocket
 ```
 
 ### Example usage in Lua:
+
+> In this example, we install luasocket using LuaRocks and then use it to make a basic HTTP request in Lua.
 
 ```lua
 -- Using LuaSocket to make a simple HTTP request
@@ -49,7 +51,26 @@ else
     print("Failed with code: " .. code)
 end
 ```
-In this example, we install luasocket using LuaRocks and then use it to make a basic HTTP request in Lua.
+
+## LuaJIT Example (Just-in-Time Compiler)
+
+**LuaJIT** is a JIT compiler that runs Lua code faster by optimizing it at runtime.
+
+### Running a Lua script with LuaJIT:
+```bash
+luajit myscript.lua
+```
+**Script example:**
+
+```lua
+-- LuaJIT will optimize this loop
+local sum = 0
+for i = 1, 1e6 do
+    sum = sum + i
+end
+print("Sum is: " .. sum)
+```
+
 
 
 We also got to write user stories based on WhatsApp. I came up with:
