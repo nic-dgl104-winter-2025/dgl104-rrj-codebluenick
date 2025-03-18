@@ -12,6 +12,46 @@ One of the highlights this week was the lecture on user stories and functional r
 
 For the required activity, I had to research a new programming language. I chose Lua – something I had heard about before but never really explored. Turns out, it’s quite popular in game development (Roblox, for example) and is also used in embedded systems. I found some useful resources, like the official [Lua.org](https://www.lua.org/) site for documentation, [LuaRocks](https://luarocks.org/) for managing Lua packages, and [LuaJIT](https://luajit.org/), which helps make Lua faster. It’s a pretty lightweight language, and I can see why it’s valued for games and embedded systems.
 
+### Simple Lua Example
+
+```lua
+-- Lua example: printing and basic function
+print("Exploring Lua for the first time!")
+
+function greet(name)
+    print("Hello, " .. name .. "!")
+end
+
+greet("World")
+greet("Lua Learner")
+```
+## LuaRocks Example (Package Management)
+
+**LuaRocks** is a package manager for Lua. It helps manage libraries and dependencies easily. Here's an example of how to install and use the popular `luasocket` library.
+
+### Installation:
+```bash
+# In terminal:
+luarocks install luasocket
+```
+
+### Example usage in Lua:
+
+```lua
+-- Using LuaSocket to make a simple HTTP request
+local http = require("socket.http")
+
+local body, code = http.request("http://example.com")
+if code == 200 then
+    print("Response body:")
+    print(body)
+else
+    print("Failed with code: " .. code)
+end
+```
+In this example, we install luasocket using LuaRocks and then use it to make a basic HTTP request in Lua.
+
+
 We also got to write user stories based on WhatsApp. I came up with:
 - *"As a user, I can quickly send a text message from my contact list."*
 - *"As a user, I can add new contacts directly from the message screen."*
