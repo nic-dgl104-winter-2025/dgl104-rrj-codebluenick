@@ -154,6 +154,37 @@ console.log(singleton1 === singleton2); // true
 ```
 Use case: Managing global app state.
 
+### 2. Observer Pattern
+
+**Purpose:** A pattern useful for event handling or notifications.
+
+```javascript
+class Subject {
+    constructor() {
+        this.observers = [];
+    }
+
+    subscribe(observer) {
+        this.observers.push(observer);
+    }
+
+    notify(data) {
+        this.observers.forEach(observer => observer.update(data));
+    }
+}
+
+class Observer {
+    update(data) {
+        console.log("Observer received data:", data);
+    }
+}
+
+const subject = new Subject();
+const observer1 = new Observer();
+subject.subscribe(observer1);
+subject.notify("New Event");
+```
+
 - I also read through the **Application Development Coding Project** assignment carefully. The rubric gave me a clearer picture of what’s expected, so now I feel a bit more grounded as I move forward.
 
 - Next up, I checked out the new **Research and Reflection Journal guide** on GitHub. It’s helpful – I now have a clearer idea of how to approach writing my journal entries, especially around connecting research to my project work.
