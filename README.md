@@ -220,6 +220,30 @@ btn2.render();
 ```
 Use case: Creating different types of UI components.
 
+### 4. Decorator Pattern
+
+**Purpose:** Adds new functionality to an object without modifying its structure.
+
+```javascript
+function addScroll(feature) {
+    feature.scroll = function() {
+        console.log("Scrolling added to the feature");
+    };
+    return feature;
+}
+
+const windowFeature = {
+    draw: function() {
+        console.log("Drawing window");
+    }
+};
+
+const decoratedWindow = addScroll(windowFeature);
+decoratedWindow.draw();
+decoratedWindow.scroll();
+```
+Use case: Adding extra behaviour like scrolling to a window.
+
 - I also read through the **Application Development Coding Project** assignment carefully. The rubric gave me a clearer picture of what’s expected, so now I feel a bit more grounded as I move forward.
 
 - Next up, I checked out the new **Research and Reflection Journal guide** on GitHub. It’s helpful – I now have a clearer idea of how to approach writing my journal entries, especially around connecting research to my project work.
