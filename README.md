@@ -262,3 +262,115 @@ The next step for me is to help my group set a rough project timeline so we can 
 ### Links I Found Helpful:
 - [Refactoring Guru](https://refactoring.guru/design-patterns)
 - [GitHub Open Source Guide](https://opensource.guide/how-to-contribute/)
+
+
+
+
+---
+
+
+## Week 10 (Week of March 11th)
+
+This week we shifted focus toward architectural thinking with **MV\*** patterns, particularly **MVC** and **MVVM**. Ashley’s lecture and Dibya’s notes provided a great breakdown of how MV* patterns differ from the more traditional design patterns we studied last week. 
+
+I found the distinction between design patterns and architectural patterns useful—where design patterns help solve smaller-scale problems, MV* patterns guide the overall structure of an entire app. The comparison helped me realize how these structures shape everything from logic to UI handling, especially when working with mobile and web apps.
+
+
+### MV* Patterns: MVC vs MVVM
+
+The lecture explained how **MVC (Model-View-Controller)** and **MVVM (Model-View-ViewModel)** differ, especially depending on the framework. I’ve had some exposure to both through coursework and side projects—like using **MVVM** with **Jetpack Compose** for Android, which I find much cleaner and more reactive compared to older **MVC** setups.
+
+We also got several helpful video links to explain these concepts. Seeing the same architecture explained in different frameworks helped reinforce the big picture for me.
+
+- [MVVM Explained Simply](https://www.youtube.com/watch?v=PkvOL-hWnGs)
+- [MVC vs MVVM](https://www.youtube.com/watch?v=o1M5hFLjcXw)
+
+---
+
+### Code Examples in JavaScript
+
+#### MVC Pattern (Model-View-Controller)
+
+```javascript
+// Model
+class Model {
+  constructor() {
+    this.data = "Hello MVC";
+  }
+
+  getData() {
+    return this.data;
+  }
+}
+
+// View
+class View {
+  render(data) {
+    console.log("View rendering:", data);
+  }
+}
+
+// Controller
+class Controller {
+  constructor(model, view) {
+    this.model = model;
+    this.view = view;
+  }
+
+  updateView() {
+    const data = this.model.getData();
+    this.view.render(data);
+  }
+}
+
+// Usage
+const model = new Model();
+const view = new View();
+const controller = new Controller(model, view);
+controller.updateView();
+```
+
+#### MVVM Pattern (Model-View-ViewModel using simple binding)
+
+```javascript
+Copy
+Edit
+// Model
+class Model {
+  constructor() {
+    this.message = "Hello MVVM";
+  }
+}
+
+// ViewModel
+class ViewModel {
+  constructor(model) {
+    this.model = model;
+    this.bindings = [];
+  }
+
+  bind(callback) {
+    this.bindings.push(callback);
+  }
+
+  setMessage(newMessage) {
+    this.model.message = newMessage;
+    this.bindings.forEach(cb => cb(this.model.message));
+  }
+
+  getMessage() {
+    return this.model.message;
+  }
+}
+
+// View (binding simulated)
+const model = new Model();
+const viewModel = new ViewModel(model);
+
+viewModel.bind((newMsg) => {
+  console.log("View updated:", newMsg);
+});
+
+console.log("Initial:", viewModel.getMessage());
+viewModel.setMessage("Updated via ViewModel");
+```
