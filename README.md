@@ -374,3 +374,101 @@ viewModel.bind((newMsg) => {
 console.log("Initial:", viewModel.getMessage());
 viewModel.setMessage("Updated via ViewModel");
 ```
+
+
+
+---
+
+
+## Week 11 (Week of March 18th)
+
+This week’s focus was all about **Object-Oriented Programming (OOP)**. We revisited core concepts like encapsulation, abstraction, inheritance, and polymorphism—some of which I’ve worked with before, but this time we went deeper into **why** these concepts matter, not just how they work.
+
+The first video was familiar, but the second brought new insights on how OOP helps manage complexity in larger projects. It made me realize that understanding OOP isn't just useful—it's kind of essential if you want your codebase to grow and still be maintainable.
+
+
+### Applying OOP in Our Group Project
+
+For our group project, we’re using **JavaScript**, which **fully supports OOP**, even if it's a bit more flexible (and less strict) than languages like Java or C++. I’m mainly applying OOP concepts in how we model app features, like users, messages, and UI components.
+
+#### Example: OOP with JavaScript in Our STMS App
+```javascript
+// services/UserService.js
+const User = require('../models/userModel');
+
+class UserService {
+    static async getAllUsers() {
+        return await User.find({}, 'name email role');
+    }
+
+    static async bulkUpdateRoles(users) {
+        for (const usr of users) {
+            await User.findByIdAndUpdate(usr._id, { role: usr.role });
+        }
+    }
+}
+
+module.exports = UserService;
+```
+I have created a service class to encapsulate logic like fetching and updating users. We also plan to implement a User class that holds account info and related methods (like login, logout, update profile). This modular setup lets us build and test each feature in isolation.
+
+## Concepts Revisited
+
+### Encapsulation
+Keeps internal data safe. We’ll use private properties and getter/setter methods where appropriate.
+
+### Abstraction
+We'll expose only what's necessary in each class. For instance, the `Message` class exposes `display()` but hides the formatting logic inside.
+
+### Inheritance
+We’re considering a base `Component` class that UI elements like buttons or forms can extend. This would reduce repetition and keep the code cleaner.
+
+### Polymorphism
+Still exploring where to apply it. We may use polymorphism when rendering different types of messages (text, image, video), each with its own `display()` method but accessed the same way.
+
+
+## Why OOP Matters for Us
+
+- **Reusability** – Shared behaviors like authentication or data formatting can be put in base classes.
+- **Modularity** – We’re dividing our app into small OOP-driven modules so that we can work in parallel.
+- **Scalability** – It’ll be easier to add new features, like notifications or chat groups, by extending existing classes.
+- **Testing** – Each class can be tested in isolation before integration.
+
+
+## Reflection & Challenges
+
+### Is JavaScript OOP capable?
+Yes, JavaScript is **fully OOP-capable** through class syntax (introduced in ES6). It also supports **functional** and **prototype-based** programming, making it **multi-paradigm**. This flexibility is helpful for blending styles where needed—though we’re focusing on OOP for clarity and structure.
+
+### Biggest challenge this week?
+Trying to map traditional OOP concepts like inheritance to JavaScript’s looser structure. In languages like Java, inheritance is more rigid and obvious. In JavaScript, we need to be more intentional about using class-based syntax to get similar results.
+
+
+## Connecting with the Community
+
+I browsed the community’s Discord (for the repo I’m contributing to). I didn’t post yet, but I read through the threads and got a feel for the culture. People are generally helpful and respectful. I might introduce myself next week as I move closer to finalizing my contribution.
+
+
+## What’s Next?
+
+- Continue refining OOP structure in our app.
+- Finalize the `User` and `Component` class hierarchy.
+- Finish external contribution task and prep for final week reflections.
+
+
+## Resources That Helped
+
+- [OOP Part 1](https://www.youtube.com/watch?v=hdVYcOgNKfc)
+- [OOP Part 2](https://www.youtube.com/watch?v=jzP2sw3I1nc)
+- [JavaScript OOP Refresher – MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
+- [Wikipedia: Multi-Paradigm Programming Languages](https://en.wikipedia.org/wiki/Multi-paradigm_programming_language)
+
+
+## OOP Summary Table
+
+| Principle     | Purpose                                      | Project Application                              |
+|---------------|----------------------------------------------|--------------------------------------------------|
+| Encapsulation | Hides internal state                         | `Message` class restricts direct data access     |
+| Abstraction   | Exposes only relevant details                | `display()` method for showing messages          |
+| Inheritance   | Reuses base class properties & methods       | Potential `Component` class for UI elements      |
+| Polymorphism  | Shared interface with varied implementation  | `display()` used by different message types      |
