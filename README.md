@@ -472,3 +472,67 @@ I browsed the community’s Discord (for the repo I’m contributing to). I didn
 | Abstraction   | Exposes only relevant details                | `display()` method for showing messages          |
 | Inheritance   | Reuses base class properties & methods       | Potential `Component` class for UI elements      |
 | Polymorphism  | Shared interface with varied implementation  | `display()` used by different message types      |
+
+
+
+---
+
+
+## Week 12 (Week of March 25th) 
+
+This week’s focus was on **Functional Programming**, and it was a refreshing shift in thinking. I was curious to dive deeper into how functional programming principles can improve the quality of our code—even in projects that aren’t purely functional.
+
+---
+
+### Functional Programming – Key Takeaways
+
+We didn’t focus on pure functional languages (like Haskell or Clojure), but instead on **functional-style tools** that are available in most modern languages. The core message was to embrace methods like `map()`, `filter()`, and `reduce()` for working with collections more efficiently and cleanly.
+
+This really clicked with me. I’ve used these methods before in JavaScript and Kotlin, but I never thought of them as part of a larger programming paradigm. Now I understand they’re functional tools that help make code more **declarative**, **concise**, and **less error-prone** than traditional loops.
+
+
+
+### JavaScript Functional Example: Filtering Tasks
+
+Here’s a quick example we could use in our group project when filtering chat messages:
+
+```javascript
+
+```javascript
+const filteredTasks = filter
+  ? tasks.filter(task =>
+      task.status === filter || task.priority === filter
+    )
+  : tasks;
+
+
+```
+This example shows how functional programming can simplify conditional logic. Instead of using if-else statements or loops, the filter() method is used to create a new array based on the selected status or priority. It’s clean, readable, and easy to extend.
+
+## Group Project Progress
+
+We're now in the final stretch of development. This week, we focused heavily on tying up core functionality and doing some light refactoring. We’re also working on making the UI more responsive and consistent.
+
+I’ve also been documenting progress in our **Research and Reflection Journal**, especially where we’ve applied **OOP** or **functional programming** ideas. We’ve still got work to do, but everything is coming together well.
+
+
+## Final Week Priorities
+
+- Finalize remaining code for our app.
+- Clean up repetitive loops and consider converting them to `map()`, `filter()`, or `reduce()`.
+- Finish up our group journal entries and project documentation.
+- Ask any last-minute questions in class and prep for submission.
+
+
+## Helpful Resource
+
+- [Functional Programming for Beginners](https://www.youtube.com/watch?v=_uXZ8HvHH7o)
+
+
+## Reminder
+
+**Community Code Project** is due on **Sunday, April 6th, 2025 at 11:59pm PST**. Time to lock in and finish strong!
+
+
+I’m really glad this course introduced us to both **OOP** and **Functional Programming**. Seeing both sides made me appreciate how combining these styles leads to better, cleaner software. Looking forward to wrapping everything up next week!
+
