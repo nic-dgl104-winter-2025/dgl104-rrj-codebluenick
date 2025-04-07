@@ -511,14 +511,15 @@ This example shows how functional programming can simplify conditional logic. In
 
 ## Group Project Progress
 
-We're now in the final stretch of development. This week, we focused heavily on tying up core functionality and doing some light refactoring. We’re also working on making the UI more responsive and consistent.
+We're now in the final stretch of development. This week, we focused heavily on tying up core functionality and doing some light refactoring. We’re also working on making the UI more responsive and consistent. I am trying to implement the backend data fetch to the frontend as it is currently using mock data. 
 
 I’ve also been documenting progress in our **Research and Reflection Journal**, especially where we’ve applied **OOP** or **functional programming** ideas. We’ve still got work to do, but everything is coming together well.
 
 
 ## Final Week Priorities
 
-- Finalize remaining code for our app.
+- Finalize the remaining code for our app.
+- Getting all the data from the backend.
 - Clean up repetitive loops and consider converting them to `map()`, `filter()`, or `reduce()`.
 - Finish up our group journal entries and project documentation.
 - Ask any last-minute questions in class and prep for submission.
